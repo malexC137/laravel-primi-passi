@@ -13,6 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('home', [
+        "name" => "Simone",
+        "surname" => "Maletta"
+    ]);
 });
+
+Route::get('/contacts', function () {
+    return ("simomalex46@gmail.com");
+})->name("contacts");
+
+Route::get('/adress', function () {
+    return ("Khaosan Road - Bangkok");
+})->name("adress");
